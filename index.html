@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Satis Sozlesmesi</title>
+    <style>
+      body {
+        border: 1px solid black;
+      }
+      #sozlesme {
+        border: 1px solid black;
+      }
+      #bilgiler {
+        border: 1px solid black;
+      }
+      #diger {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Kişisel Bilgi ve Mesleki Yeterlilik Bilgi Formu</h1>
+    </center>
+    <form action="result.html">
+      <div id="sozlesme">
+        <caption style="text-align: left; caption-side: top">
+          <b>Sözleşme Onay</b> 
+        </caption>
+        <br />
+        <input type="checkbox" name="onay" id="onay" value="onaylandı" required />
+        <label for="onay"
+          >Aşağıdaki bilgilerin doğruluğunu kabul ediyorum ve işbu sözleşmeyi
+          ONAYLIYORUM.</label
+        ><br />
+        <input type="submit" value="Formu Kaydet" />
+        <input type="reset" value="Formu Temizle" />
+      </div>
+      <br />
+      <div id="bilgiler">
+        <caption>
+         <b> Kişisel Bilgiler</b>
+        </caption>
+        <br />
+        
+        <label for="ad"
+          >Ad:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="text"
+          name="ad"
+          id="ad"
+          placeholder="Adınızı Giriniz..."
+          required
+        /><br />
+        <label for="soyad"
+          >Soyad:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="text"
+          name="soyad"
+          id="soyad"
+          placeholder="Soyadınızı Giriniz..."
+        /><br />
+        <label for="yas"
+          >Yaş:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="number"
+          name="yas"
+          id="yas"
+          placeholder="(Zorunlu Alan Değildir)"
+        /><br />
+        <label for="mail"
+          >Mail
+          Adresi:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input
+          type="email"
+          name="mail"
+          id="mail"
+          placeholder="example@example.com"
+          required
+        /><br />
+        <label for="foto"
+          >Fotoğraf Ekle:*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label
+        >
+        <input type="file" name="foto" id="foto" required/>
+      </div>
+      <br />
+      <div id="diger">
+        <p><b>Diğer Bilgiler</b> </p>
+        <table>
+          <tbody>
+            <tr>
+              <th colspan="2">Buradaki alanlar Mesleki Deneyimi Kapsar</th>
+            </tr>
+            <tr>
+              <td>
+                <label for="giris">Sektöre Giriş Tarihi</label>
+              </td>
+              <td>
+                <input
+                  type="date"
+                  name="giris"
+                  id="giris"
+                  max="2022-01-13"
+                  min="1970-01-01"
+                  value="2022-01-13"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Sektör Deneyimi</p>
+              </td>
+              <td>
+                <input type="radio" name="tecrube" id="1-5" value="1-5" />
+                <label for="1-5">1-5 Yıl</label>
+                <br />
+                <input type="radio" name="tecrube" id="6-10" value="6-10" />
+                <label for="6-10">6-10 Yıl</label>
+                <br />
+                <input
+                  type="radio"
+                  name="tecrube"
+                  id="10"
+                  value="10 yil uzeri"
+                />
+                <label for="10">10 Yıl Üzeri</label>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>Programlama Dilleri</p>
+              </td>
+              <td>
+                <input type="checkbox" name="program" id="Jawa" />
+                <label for="Jawa">Java Script</label><br />
+                <input type="checkbox" name="program" id="C" />
+                <label for="Jawa">C#</label><br />
+                <input type="checkbox" name="program" id="py" />
+                <label for="py">Python</label><br />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>İngilizce Seviyesi*</p>
+              </td>
+              <td>hiç bilmiyor<input type="range" name="" id="" required/>mükemmel</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <p><b>Kısaca Özgeçmiş</b></p>
+        <textarea name="ozgecmis" id="" cols="100" rows="10"></textarea>
+      </div>
+    </form>
+  </body>
+</html>
